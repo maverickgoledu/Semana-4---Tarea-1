@@ -4,7 +4,7 @@
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <RootNamespace>Semana_4___Tarea_1</RootNamespace>
+    <RootNamespace>Semana_3_Tarea_1</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>

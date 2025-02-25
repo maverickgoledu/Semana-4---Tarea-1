@@ -1,6 +1,7 @@
 ﻿@model Preguntas.Models.Pregunta
 
 @{
+    // Establece el título de la página
     ViewData["Title"] = "Crear Pregunta";
 }
 
@@ -9,20 +10,28 @@
 <hr />
 <div class="row">
     <div class="col-md-6">
+        <!-- Formulario para crear una nueva pregunta -->
         <form asp-action="Create">
+            <!-- Muestra los errores de validación del modelo -->
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
+                <!-- Etiqueta para el campo de texto de la pregunta -->
                 <label asp-for="TextoPregunta" class="control-label"></label>
+                <!-- Área de texto para ingresar la pregunta -->
                 <textarea asp-for="TextoPregunta" class="form-control"></textarea>
+                <!-- Muestra los errores de validación específicos para el campo de texto de la pregunta -->
                 <span asp-validation-for="TextoPregunta" class="text-danger"></span>
             </div>
             <div class="form-group form-check">
                 <label class="form-check-label">
+                    <!-- Checkbox para indicar si la pregunta está activa -->
                     <input class="form-check-input" asp-for="Activa" /> @Html.DisplayNameFor(model => model.Activa)
                 </label>
             </div>
             <div class="form-group mt-3">
+                <!-- Botón para enviar el formulario y crear la pregunta -->
                 <input type="submit" value="Crear" class="btn btn-primary" />
+                <!-- Enlace para volver a la lista de preguntas -->
                 <a asp-action="Index" class="btn btn-secondary">Volver a la Lista</a>
             </div>
         </form>
@@ -31,6 +40,7 @@
 
 @section Scripts {
     @{
+        // Incluye los scripts de validación parcial
         await Html.RenderPartialAsync("_ValidationScriptsPartial");
     }
 }
